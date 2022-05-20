@@ -9,6 +9,7 @@ import android.text.TextWatcher
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
@@ -112,8 +113,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        binding.recycler
         adapter = TodoAdapter(this, dao)
-        lst.adapter = adapter
+        RecyclerView.Adapter(adapter)
         lst.divider = null
         clr.visibility = View.GONE
 
